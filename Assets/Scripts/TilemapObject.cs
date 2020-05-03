@@ -16,7 +16,6 @@ public class TilemapObject
     private Sprite[] tiles;
     private bool loaded = false;
     private Dictionary<int, TileType> tileCodes = new Dictionary<int, TileType>();
-    public List<GameObject> cornerFields = new List<GameObject>();
     public TilemapObject() {
         tileCodes.Add(0, TileType.E);
         tileCodes.Add(1, TileType.U);
@@ -52,7 +51,15 @@ public class TilemapObject
     }
 
     public TileType GetTileTypeByCode(int code) {
-        return tileCodes[code];
+        TileType result;
+        try {
+            result = tileCodes[code];
+        }
+        catch (KeyNotFoundException) {
+            Debug.LogError("No tile for corresponding code.");
+            return TileType.E;
+        }
+        return result;
     }
 
 
