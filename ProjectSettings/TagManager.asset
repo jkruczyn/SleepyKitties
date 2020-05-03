@@ -46,6 +46,12 @@ TagManager:
   - name: Background
     uniqueID: 1158894075
     locked: 0
+  - name: Grid
+    uniqueID: 354916863
+    locked: 0
+  - name: TileCorners
+    uniqueID: 2268385381
+    locked: 0
   - name: Tiles
     uniqueID: 428641195
     locked: 0
