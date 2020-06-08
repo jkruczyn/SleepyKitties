@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Assets.Scripts.Enums;
 using System.Linq;
 public class TilemapObject
 {
@@ -12,6 +11,12 @@ public class TilemapObject
      *          'CRU', 'U', 'CLU', 'LR' , 'UD' , 'E'    ]
 
      */
+    public enum TileType {
+        CRD = 0, D, CLD, LU, UR, LUR,
+        WR, W, WL, LD, RD, LDR,
+        R, F, L, DLU, DRU, LURD,
+        CRU, U, CLU, LR, UD, E
+    }
 
     private Sprite[] tiles;
     private bool loaded = false;
